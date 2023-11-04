@@ -5,7 +5,8 @@
 - 실행 단계에서 js로 컴파일링함
 
 - webpack
-  웹 모듈 번들러
+
+  - 웹 모듈 번들러
 
 - ts-loader
-  typescript와 webpack의 중간자
+  - typescript와 webpack의 중간자
