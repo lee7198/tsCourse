@@ -1,8 +1,14 @@
 const path = require("path");
 
 module.exports = {
+  mode: "development",
   entry: "./src/index.ts",
   devtool: "inline-source-map",
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "./"),
+    },
+  },
   module: {
     rules: [
       {
@@ -23,5 +29,7 @@ module.exports = {
     filename: "bundle.js",
     // 하드코딩 되어 있지 않은 path name을 구축
     path: path.resolve(__dirname, "dist"),
+    // webpack dev serve 사용 시 (dev 모드)
+    publicPath: "/dist",
   },
 };
